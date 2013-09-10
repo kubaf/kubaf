@@ -1,4 +1,4 @@
-kubaf.github.com
+kubaf
 ================
 
 Personal site
