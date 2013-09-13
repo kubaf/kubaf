@@ -1,5 +1,42 @@
 extends layout
 
 block content
-  h1 Kuba Fietkiewicz
-  p Welcome to #{title}
+
+  section#home
+    h1 ~Kuba Fietkiewicz/
+    p Welcome to my interactive page.
+
+
+  section#contact(data-0='background-color:rgb(255,255,255);', data-500='background-color:rgb(0,0,0);')
+    h1 ~/contact
+
+  section#resume
+    h1 ~/resume
+
+
+  section#work
+    h1 ~/work
+    ul
+      li http://calls.yp.com
+      li http://dealoftheday.yp.com
+
+  .footer
+    .console
+      ~/ $
+      input.console-input(type='text', placeholder=' ie: git help')
+    .help
+      h2 Commands
+      ul
+        li git checkout home
+        li git checkout contact
+        li git checkout resume
+        li git checkout work
+
+block script
+  script
+    $(function(){
+      // Set focus to input area to get cursor
+      $(".console-input").focus();
+
+      var s = skrollr.init();
+    });

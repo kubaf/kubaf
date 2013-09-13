@@ -1,8 +1,59 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+
+section {
+  min-height: 500px;
+  
+}
+
+section#contact {
+  background-image: url('/images/IMG_1406.jpg');
+  background-size: cover;
+  background-position: 50% 0%;
+  background-repeat: no-repeat no-repeat;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  min-height: 120px;
+  border-top: 1px solid black;
+  width: 100%;
+  background-color: white;
+}
+.console {
+  display: inline-block;
+  float: left;
+  border-bottom: 1px solid black;
+  
+  position: absolute;
+  bottom: 80px;
+  margin-left: 50px;
+}
+
+.console-input {
+  width: 270px;
+  border: none; 
+  outline-color: white;
+  outline-style: none;
+}
+
+.help {
+  -display: inline-block;
+  -position: relative;
+  margin-left: 400px;
+}
+
+/* Placeholder styles */
+::-webkit-input-placeholder { 
+  font-color: #111; 
+}
+::-moz-placeholder { font-style: italic; } /* firefox 19+ */
+:-ms-input-placeholder { font-style: italic; } /* ie */
+input:-moz-placeholder { font-style: italic; }
