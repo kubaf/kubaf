@@ -5,26 +5,27 @@ include mixins/nav
 
 block content
 
-  section#home
-    h1 ~Kuba Fietkiewicz/
-    p Welcome to my interactive page.
   mixin nav
 
+  section#home
+    .section-content
+      h1 ~Kuba Fietkiewicz/
+      h4 Engineer * Father * Leader
+      p You can navigate by scrolling down, clicking on the buttons to the right, or entering commands below.
 
-  section#contact(data-0='background-color:rgb(255,255,255);', data-500='background-color:rgb(0,0,0);')
-    h1 ~/contact
+  section#contact
+    h1 ~/Contact
 
   section#resume
-    h1 ~/resume
-
+    h1 ~/Resume
 
   section#work
-    h1 ~/work
+    h1 ~/Work
     ul
       li http://calls.yp.com
-      li http://dealoftheday.yp.com
+      li stuff
 
-  .footer
+  .command-console
     .console
       ~/ $
       input.console-input(type='text', placeholder=' ie: git help')
