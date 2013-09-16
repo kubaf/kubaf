@@ -27,19 +27,19 @@ section#contact {
   background-repeat: no-repeat no-repeat;
 }
 
-.footer {
+.command-console {
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 10px;
+  left: 10px;
   min-height: 120px;
-  border-top: 1px solid black;
-  width: 100%;
-  background-color: white;
+  border: 2px solid #ccc;
+  width: 550px;
+  background-color: rgba(33,33,33,.5);
 }
 .console {
   display: inline-block;
   float: left;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccc;
   
   position: absolute;
   bottom: 80px;
@@ -47,16 +47,18 @@ section#contact {
 }
 
 .console-input {
-  width: 270px;
+  width: 200px;
   border: none; 
   outline-color: white;
   outline-style: none;
+  background-color: transparent;
+  color: white;
 }
 
 .help {
   -display: inline-block;
   -position: relative;
-  margin-left: 400px;
+  margin-left: 310px;
 }
 
 /* Placeholder styles */
