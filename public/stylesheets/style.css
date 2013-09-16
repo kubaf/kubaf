@@ -6,6 +6,15 @@ a {
   color: #00B7FF;
 }
 
+.nav {
+  list-style: none;
+  position: fixed;
+  right: 44px;
+  height: 280px;
+  margin-top 40px;
+  z-index: 50;
+}
+
 section {
   min-height: 500px;
   
