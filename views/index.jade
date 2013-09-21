@@ -30,17 +30,18 @@ block content
     .section-content
       h1 ~/Contact
 
-  .command-console
-    .console
-      ~/ $
-      input.console-input(type='text', placeholder=' ie: git help')
-    .help
-      h2 Commands
-      ul
-        li git checkout home
-        li git checkout contact
-        li git checkout resume
-        li git checkout work
+  if(is_desktop)
+    .command-console
+      .console
+        ~/ $
+        input.console-input(type='text', placeholder=' ie: git help')
+      .help
+        h2 Commands
+        ul
+          li git checkout home
+          li git checkout contact
+          li git checkout resume
+          li git checkout work
 
 block script
   script
