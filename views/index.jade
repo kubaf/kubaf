@@ -9,21 +9,26 @@ block content
 
   section#home
     .section-content
+      //(data-0-top="top:0px", data--1000-bottom="top:-200px", data-anchor-target="section#home")
       h1 ~Kuba Fietkiewicz/
       h4 Engineer * Father * Leader
       p You can navigate by scrolling down, clicking on the buttons to the right, or entering commands below.
 
-  section#contact
-    h1 ~/Contact
+  section#work
+    .section-content
+      //(data-0-top="top:0px", data--1000-bottom="top:-300px", data-anchor-target="section#resume")
+      h1 ~/Work
+      ul
+        li http://calls.yp.com
+        li stuff
 
   section#resume
-    h1 ~/Resume
+    .section-content
+      h1 ~/Resume
 
-  section#work
-    h1 ~/Work
-    ul
-      li http://calls.yp.com
-      li stuff
+  section#contact
+    .section-content
+      h1 ~/Contact
 
   .command-console
     .console
@@ -44,4 +49,13 @@ block script
       $(".console-input").focus();
 
       var s = skrollr.init();
+      
+      $('a').click(function(){
+          var top = $('body').find($(this).attr('href')).offset().top;
+          $('html, body').animate({
+              scrollTop: top
+          },500, 'easeOutExpo');
+
+          return false;
+      });
     });
