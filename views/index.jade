@@ -51,7 +51,7 @@ block script
 
       var s = skrollr.init();
       
-      $('a').click(function(){
+      $('a').on('click touchstart', function(){
           var top = $('body').find($(this).attr('href')).offset().top;
           $('html, body').animate({
               scrollTop: top
