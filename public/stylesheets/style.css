@@ -1,20 +1,40 @@
+@font-face { font-family: 'helvetica'; src: local('Arial'); }
+
 html {
   height: 100%;
 }
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
   color: white;
   height: 100%;
 }
 
 h1 {
+  -position: relative;
   font-size: 5em;
+  font-weight: lighter;
   margin-top: 0;
   margin-bottom: 100px;
 }
 
+h4 {
+  font-weight: lighter;
+}
+
 a {
-  color: #00B7FF;
+  opacity: .5;
+  background-color: transparent;
+}
+a:hover {
+  opacity: 1;
+  background-color: transparent;
+}
+
+a:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
 }
 
 .nav {
@@ -26,9 +46,17 @@ a {
   z-index: 50;
 }
 
+#square {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border: 0;
+}
+
 
 section {
   background-position: 50% 50%;
+  background-attachment: fixed;
   background-repeat: no-repeat no-repeat;
   background-size: auto;
   position: relative;
@@ -41,10 +69,15 @@ section {
 .section-content {
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 section#home {
   background-image: url('/images/ios-linen.jpg');
+}
+
+section#home .section-content {
+  position: fixed;
 }
 
 section#home p, h4 {
