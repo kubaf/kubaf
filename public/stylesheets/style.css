@@ -132,6 +132,10 @@ section#work {
   margin-left: 310px;
 }
 
+.help h4 {
+  margin-left: 25px;
+}
+
 /* Placeholder styles */
 ::-webkit-input-placeholder { 
   font-color: #111; 
