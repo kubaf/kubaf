@@ -36,27 +36,58 @@ block content
         ~/ $
         input.console-input(type='text', placeholder=' ie: git help')
       .help
-        h2 Commands
+        h4 Commands
         ul
+          li git help
           li git checkout home
-          li git checkout contact
-          li git checkout resume
           li git checkout work
+          li git checkout resume
+          li git checkout contact
 
 block script
   script
     $(function(){
+      var $inputBox = $(".console-input");
+    
       // Set focus to input area to get cursor
-      $(".console-input").focus();
+      $inputBox.focus();
 
       var s = skrollr.init();
       
       $('a').on('click touchstart', function(){
-          var top = $('body').find($(this).attr('href')).offset().top;
-          $('html, body').animate({
-              scrollTop: top
-          },500, 'easeOutExpo');
-
+          where = $(this).attr('href');
+          scrollAnimation(where);
           return false;
       });
+      
+      var scrollAnimation = function(where) {
+        var top = $('body').find(where).offset().top;
+        $('html, body').animate({
+            scrollTop: top
+        },500, 'easeOutExpo');
+      }
+      
+      var extractLocation = function(command) {
+        var matches = command.match(/(home|resume|contact|work)/g);
+        // Return empty or the first match
+        return matches ? '#'+matches[0] : false;
+      }
+      
+      $inputBox.on('keypress', function(e) {
+        if(e.which == 13) {
+          var command = $inputBox.val();
+          var where = extractLocation(command);
+          if(where) {
+            scrollAnimation(where);
+            $inputBox.attr("placeholder", " ie: git help");
+          } else {
+            $inputBox.attr("placeholder", " invalid command. try 'help'");
+          }
+          $inputBox.val('');
+        }
+      });
+      
+      
+      
+      
     });
