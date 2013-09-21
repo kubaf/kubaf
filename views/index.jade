@@ -48,6 +48,7 @@ block script
   script
     $(function(){
       var $inputBox = $(".console-input");
+      var $help = $(".help");
     
       // Set focus to input area to get cursor
       $inputBox.focus();
@@ -68,7 +69,7 @@ block script
       }
       
       var extractLocation = function(command) {
-        var matches = command.match(/(home|resume|contact|work)/g);
+        var matches = command.match(/(home|resume|contact|work|help)/g);
         // Return empty or the first match
         return matches ? '#'+matches[0] : false;
       }
@@ -77,9 +78,12 @@ block script
         if(e.which == 13) {
           var command = $inputBox.val();
           var where = extractLocation(command);
-          if(where) {
+          if(where=='#help') {
+            animateHelp(true);
+          } else if(where) {
             scrollAnimation(where);
             $inputBox.attr("placeholder", " ie: git help");
+            animateHelp(false);
           } else {
             $inputBox.attr("placeholder", " invalid command. try 'help'");
           }
@@ -87,7 +91,17 @@ block script
         }
       });
       
-      
-      
-      
+      var animateHelp = function(on) {
+        var options = {
+            duration: 2000, 
+            easing: 'easeOutExpo'
+          }
+        if(on) {
+          $help.fadeIn(options);
+        } else {
+          $help.fadeOut(options);
+        }
+        return false;
+      }
+
     });
