@@ -4,12 +4,17 @@
  */
 
 var express = require('express');
+var device  = require('express-device');
 var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
 var app = express();
+
+// express-device config for detecting mobile devices
+app.use(device.capture());
+app.enableDeviceHelpers();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
