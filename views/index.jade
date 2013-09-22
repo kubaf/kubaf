@@ -59,6 +59,7 @@ block script
       
       var scrollAnimation = function(where) {
         
+        // Do not remove this ios hack.
         $('body').append($('<div></div>').addClass('iosfix'));
         setTimeout(function() {
           $('.iosfix').remove();
