@@ -16,13 +16,30 @@ block content
   section#work
     .section-content
       h1 ~/Work
-      ul
-        li http://calls.yp.com
-        li stuff
-
-  section#resume
-    .section-content
-      h1 ~/Resume
+      a(href='http://calls.yp.com', target='_blank')
+        .content-area
+          img(src='/images/ipad-calls.png', width='200px', height='150px')
+          .explanation
+            p http://calls.yp.com
+            .technology
+              h5 Technology
+              ul
+                li Ruby/Sinatra
+                li LWES
+                li Redis
+                li MySQL
+      a(href='http://vimeo.com/channels/286068', target='_blank')
+        .content-area
+          iframe(src="//player.vimeo.com/video/36044766", width="200", height="150", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+          .explanation
+            p http://www.buzz.com
+            .technology
+              h5 Challenge
+              ul
+                li 3 mths MVP
+                li Usability
+                li 3 mths Beta
+                li Remote Eng Team
 
   section#contact
     .section-content
@@ -36,11 +53,10 @@ block content
       .help
         h4 Commands
         ul
-          li git help
-          li git checkout home
-          li git checkout work
-          li git checkout resume
-          li git checkout contact
+          li vi help
+          li vi home
+          li vi work
+          li vi contact
 
 block script
   script
@@ -72,7 +88,7 @@ block script
       }
       
       var extractLocation = function(command) {
-        var matches = command.match(/(home|resume|contact|work|help)/g);
+        var matches = command.match(/(home|contact|work|help)/g);
         // Return empty or the first match
         return matches ? '#'+matches[0] : false;
       }
@@ -85,10 +101,10 @@ block script
             animateHelp(true);
           } else if(where) {
             scrollAnimation(where);
-            $inputBox.attr("placeholder", " ie: git help");
+            $inputBox.attr("placeholder", " ie: vi help");
             animateHelp(false);
           } else {
-            $inputBox.attr("placeholder", " invalid command. try 'help'");
+            $inputBox.attr("placeholder", " invalid command. try 'vi help'");
           }
           $inputBox.val('');
         }

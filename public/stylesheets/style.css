@@ -26,16 +26,20 @@ h4 {
 }
 
 a {
+  color: white;
+}
+
+.nav a {
   opacity: .5;
   background-color: transparent;
 }
-a:hover {
+.nav a:hover {
   opacity: 1;
   background-color: transparent;
 }
 
 a:-webkit-any-link {
-color: -webkit-link;
+color: white;
 text-decoration: underline;
 cursor: auto;
 }
@@ -101,12 +105,38 @@ section#work {
   background-image: url('/images/wood1-light.jpg');
 }
 
+.content-area {
+  position: relative;
+  min-height: 200px;
+  border: 2px solid #ccc;
+  width: 400px;
+  background-color: rgba(33,33,33,.5);
+  margin: 10px;
+  padding: 10px;
+  display:inline;
+  float: left;
+}
+.content-area img {
+  vertical-align: top;
+  float: left;
+}
+
+.content-area iframe {
+  vertical-align: top;
+}
+.explanation {
+  padding:10px;
+  display: inline-block;
+}
+.technology {
+  display: inline-block;
+}
+
 
 .command-console {
   position: fixed;
   bottom: 10px;
   left: 10px;
-  min-height: 120px;
   border: 2px solid #ccc;
   min-width: 350px;
   min-height: 138px;
