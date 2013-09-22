@@ -62,6 +62,12 @@ block script
       });
       
       var scrollAnimation = function(where) {
+        
+        $('body').append($('<div></div>').addClass('iosfix'));
+        setTimeout(function() {
+          $('.iosfix').remove();
+        }, 500);
+        
         var top = $('body').find(where).offset().top;
         $('html, body').animate({
             scrollTop: top
