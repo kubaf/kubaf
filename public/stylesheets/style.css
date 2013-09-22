@@ -1,5 +1,3 @@
-@font-face { font-family: 'helvetica'; src: local('Arial'); }
-
 html {
   height: 100%;
   background-color: black;
@@ -14,10 +12,12 @@ body {
 
 h1 {
   -position: relative;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 100;
   margin-top: 0;
-  margin-bottom: 100px;
+  margin-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 60px;
   text-shadow:1px 1px 5px #333;
 }
 
@@ -84,7 +84,7 @@ section#home .section-content {
 }
 
 section#home p, h4 {
-  width: 300px;
+  width: 240px;
   margin-left: 50px;
 }
 
