@@ -5,7 +5,7 @@ html {
 }
 body {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 100;
   color: white;
   height: 100%;
 }
@@ -13,9 +13,10 @@ body {
 h1 {
   -position: relative;
   font-size: 5em;
-  font-weight: lighter;
+  font-weight: 100;
   margin-top: 0;
   margin-bottom: 100px;
+  text-shadow:1px 1px 5px #333;
 }
 
 h4 {
