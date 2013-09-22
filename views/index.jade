@@ -9,14 +9,12 @@ block content
 
   section#home
     .section-content
-      //(data-0-top="top:0px", data--1000-bottom="top:-200px", data-anchor-target="section#home")
       h1 ~Kuba Fietkiewicz/
       h4 Engineer * Father * Leader
       p You can navigate by scrolling down, clicking on the buttons to the right, or entering commands below.
 
   section#work
     .section-content
-      //(data-0-top="top:0px", data--1000-bottom="top:-300px", data-anchor-target="section#resume")
       h1 ~/Work
       ul
         li http://calls.yp.com
@@ -53,8 +51,6 @@ block script
       // Set focus to input area to get cursor
       $inputBox.focus();
 
-      var s = skrollr.init();
-      
       $('a').on('click touchstart', function(){
           where = $(this).attr('href');
           scrollAnimation(where);
