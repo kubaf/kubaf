@@ -90,6 +90,7 @@ section#home p, h4 {
 
 section#contact {
   background-image: url('/images/denim8-light.jpg');
+  height: 110%;
 }
 
 section#resume {
