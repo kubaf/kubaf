@@ -63,15 +63,27 @@ block script
     $(function(){
       var $inputBox = $(".console-input");
       var $help = $(".help");
-    
+      var $navButtons = $('.nav a');
+      
       // Set focus to input area to get cursor
       $inputBox.focus();
 
       $('a').on('click touchstart', function(){
           where = $(this).attr('href');
           scrollAnimation(where);
+          setNavButton(where);
           return false;
       });
+      
+      var setNavButton = function(where) {
+        var $buttonToSet = $('a[href="'+where+'"]');
+        $navButtons.css({opacity: 0.5});
+        $buttonToSet.css({opacity: 1});
+        return false;
+      }
+      
+      setNavButton("#home");
+      
       
       var scrollAnimation = function(where) {
         
@@ -84,7 +96,7 @@ block script
         var top = $('body').find(where).offset().top;
         $('html, body').animate({
             scrollTop: top
-        },500, 'easeOutExpo');
+        },700, 'easeOutQuint');
       }
       
       var extractLocation = function(command) {
@@ -101,6 +113,7 @@ block script
             animateHelp(true);
           } else if(where) {
             scrollAnimation(where);
+            setNavButton(where);
             $inputBox.attr("placeholder", " ie: vi help");
             animateHelp(false);
           } else {
