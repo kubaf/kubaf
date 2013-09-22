@@ -43,7 +43,7 @@ cursor: auto;
 .nav {
   list-style: none;
   position: fixed;
-  right: 44px;
+  right: 25px;
   height: 280px;
   margin-top 40px;
   z-index: 50;
