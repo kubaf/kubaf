@@ -131,13 +131,23 @@ section#work {
 
 #contact .content-area {
   position: relative;
-  min-height: 100px;
+  min-height: 126px;
   width: 200px;  
+}
+
+#contact .content-area img {
+  width:32px;
+  height:32px;
 }
 
 .content-area img {
   vertical-align: top;
   float: left;
+}
+
+#contact .content-area h2 {
+  padding-top: 0;
+  padding-left: 20px;
 }
 
 .content-area iframe {

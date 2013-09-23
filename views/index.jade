@@ -47,22 +47,26 @@ block content
   section#contact
     .section-content
       h1 ~/Contact
-      .content-area
-        img(src='/images/linkedin.png', width='50px', height='50px')
-        h2 LinkedIn
-        p Need a CTO? Need a job?
-      .content-area
-        img(src='/images/twitter.png', width='50px', height='50px')
-        h2 @kubaf
-        p I don't often tweet, but when I do...
-      .content-area
-        img(src='/images/wordpress.png', width='50px', height='50px')
-        h2 Blog
-        p Ramblings on technology.
-      .content-area
-        img(src='/images/github.png', width='50px', height='50px')
-        h2 GitHub
-        p If you find beauty in code.
+      a(href='http://www.linkedin.com/in/kubafietkiewiczpmp', target='_blank')
+        .content-area
+          img(src='/images/linkedin.png')
+          h2 LinkedIn
+          p Not looking but always open for the right VPE/CTO opportunity.
+      a(href='http://www.twitter.com/kubaf', target='_blank')
+        .content-area
+          img(src='/images/twitter.png')
+          h2 @kubaf
+          p I don't often tweet, but when I do...
+      a(href='http://kubaf.wordpress.com', target='_blank')
+        .content-area
+          img(src='/images/wordpress.png')
+          h2 Blog
+          p Ramblings on technology.
+      a(href='http://www.github.com/kubaf', target='_blank')
+        .content-area
+          img(src='/images/github.png')
+          h2 GitHub
+          p If you find beauty in code.
 
   if(is_desktop)
     .command-console
